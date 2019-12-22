@@ -10,13 +10,13 @@ router.get('/:number/', function(req, res, next){
  //In questo caso richiamiamo la funzione next che passa l'errore al gestore degli errori
  //Il gestore degli errori è stato definito nell'app.js
  let poeta = people.persone.find(p => p.number == req.params.number)
- if (poeta === "undefined") {
+ if (typeof poeta === "undefined") {
    return next(createError(404, 'Persona non trovata'));
  }
  else
  {
    res.render('specifiche', {
-    title: `Specifiche per: ${poeta.name}`,
+    title: `Specifiche di: ${poeta.name}`,
     poeta,
   }); ; 
  }

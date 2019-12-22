@@ -4,7 +4,7 @@ const people = require('../people.json');
 
 router.get('/', (req, res) => {
   res.render('index', {
-    title: 'Poeti',
+    title: 'Poeti (Clicca sul nome per vedere le specifiche)',
     people: people.persone 
   });
 });

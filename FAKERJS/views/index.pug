@@ -7,8 +7,9 @@ block content
   article
     each p in people
       div
-        img(src=`${p.image}`)
-        h2 #{p.name}
-        a(href=`/specifiche/${p.number}`)  Clicca per vedere le specifiche
+        a(href=`/specifiche/${p.number}`) #{p.name}
+        br
+        br
+        img(src=`${p.image}`, width=300, height=300)
         hr
 
